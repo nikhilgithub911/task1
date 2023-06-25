@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    /* background-image: url(delhi.jpg); */
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    animation-name: change;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    background-color: rgba(94, 93, 93, 0.678);
+}
+ul{
+    float: right;
+    list-style-type: none;
+    margin-top: 25px;
+
+}
+ul li{
+    display: inline-block;
+}
+ul li a{
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 20px;
+    border: 1px solid transparent;
+    transition: 0.6s ease;
+}
+ul li a:hover{
+    background-color: #fff;
+    color: #000;
+}
+.logo img{
+    float: left;
+    width: 76px;
+    height: auto;
+}
+.main{
+    max-width: 1200px;
+    margin: auto;
+}
+/* ul li.active a{
+      background-color: #fff;
+      color: #000;
+} */
+
+.title{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.title h3{
+    /* transform: translate(-50%,-50%); */
+    margin-left: 70%vw;
+    color: #fff;
+
+}
+.title h1{
+    color: #fff;
+    font-size: 70px;
+}
+.title h4{
+    color: #fff;
+}
+.title .dynamic-text::after{
+    content: "";
+}
+.button{
+    position: absolute;
+    top: 62%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    margin-top: 20px;
+}
+.btn{
+    border: 1px solid #fff;
+    padding: 10px 30px;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.6s ease;
+}
+.btn:hover{
+    background-color: #fff;
+    color: #000;
+}
+#btn2{
+    /* background-color: green; */
+}
+#btn2:hover{
+    box-shadow: inset 400px 0 0 0 green;
+}
+@keyframes change {
+    0% {
+        background-image: url(delhi.jpg);
+        .title .dynamic-text::after {
+            content: "Delhi - ";
+        }
+    }
+    25% {
+        background-image: url(kerala.jpg);
+        .title .dynamic-text::after {
+            content: "Kerala - ";
+        }
+    }
+    50% {
+        background-image: url(maharashtra.jpg);
+        .title .dynamic-text::after {
+            content: "Maharashtra - ";
+        }
+    }
+    75% {
+        background-image: url(sikkim.jpg);
+        .title .dynamic-text::after {
+            content: "Sikkim - ";
+        }
+    }
+    100% {
+        background-image: url(kerala.jpg);
+        .title .dynamic-text::after {
+            content: "Kerala - ";
+        }
+    }
+}
+
+/* Media Queries */
+/* @media screen and (max-width: 768px) {
+    .title h3 {
+        margin-left: 0;
+        text-align: center;
+    }
+    
+    .title h1 {
+        font-size: 40px;
+    }
+    
+    .button {
+        top: 70%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .title h1 {
+        font-size: 30px;
+    }
+    
+    .button {
+        top: 80%;
+    }
+} */
